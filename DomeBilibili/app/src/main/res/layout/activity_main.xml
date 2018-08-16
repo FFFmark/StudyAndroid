@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/main_layout_title">
+
+        <com.zptc.domebilibili.viewpager.MyViewPager
+            android:id="@+id/vp_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.zptc.domebilibili.viewpager.MyViewPager>
+
+        <LinearLayout
+            android:id="@+id/main_layout_menu"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/img_menu"/>
+
+            <ImageView
+                android:id="@+id/main_img_portrait"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/img_portrait"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.zptc.domebilibili.viewpager.MyViewPager
+        android:id="@+id/vp_push"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </com.zptc.domebilibili.viewpager.MyViewPager>
+
+    <LinearLayout
+        android:id="@+id/main_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#aaffffff"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/mian_layout_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Navigation_layout"
+            android:layout_weight=".25">
+
+            <ImageView
+                android:id="@+id/main_img_home"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_home_true"/>
+            <TextView
+                android:id="@+id/main_tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Navigation_tv_ture"
+                android:text="@string/home"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_layout_channel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Navigation_layout"
+            android:layout_weight=".25">
+
+            <ImageView
+                android:id="@+id/main_img_channel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_channel_false"/>
+            <TextView
+                android:id="@+id/main_tv_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Navigation_tv_flase"
+                android:text="@string/channel"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_layout_dynamic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Navigation_layout"
+            android:layout_weight=".25">
+
+            <ImageView
+                android:id="@+id/main_img_dynamic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_dynamic_false"/>
+            <TextView
+                android:id="@+id/main_tv_dynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Navigation_tv_flase"
+                android:text="@string/dynamic"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_layout_vipshop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            style="@style/Navigation_layout"
+            android:layout_weight=".25">
+
+            <ImageView
+                android:id="@+id/main_img_vipshop"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/img_shop_false"/>
+            <TextView
+                android:id="@+id/main_tv_vipshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Navigation_tv_flase"
+                android:text="@string/vipshop"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

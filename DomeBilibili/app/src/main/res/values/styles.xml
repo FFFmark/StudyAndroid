@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--底部导航栏中Item_layout的设置-->
+    <style name="Navigation_layout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--底部导航栏未选中样式-->
+    <style name="Navigation_tv_flase">
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <!--底部导航栏选中后样式-->
+    <style name="Navigation_tv_ture">
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/colorAccentBackground</item>
+    </style>
+
+    <!--本APP中大部分table选项标准模板-->
+    <style name="table_tv_ture">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorAccentBackground</item>
+    </style>
+    <style name="table_tv_false">
+        <item name="android:textSize">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextGray</item>
+    </style>
+
+    <!--title栏tv样式-->
+    <style name="title_tv">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:orientation="horizontal"
+            android:weightSum="9">
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               style="@style/table_tv_false"
+               android:text="@string/dynamic_video"
+               android:layout_weight="3"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/table_tv_ture"
+                android:text="@string/dynamic_comprehensive"
+                android:layout_weight="3"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                style="@style/table_tv_false"
+                android:text="@string/dynamic_hot"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

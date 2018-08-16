@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DomeBilibili</string>
+
+    <!--        这部分是导航栏所用文字        -->
+    <string name="home">首页</string>
+    <string name="channel">频道</string>
+    <string name="dynamic">动态</string>
+    <string name="vipshop">会员购</string>
+
+    <!--        这部分是home界面所用文字         -->
+    <string name="home_live">直播</string>
+    <string name="home_recommended">推荐</string>
+    <string name="home_chase">追番</string>
+    <string name="home_lovelywar">萌战</string>
+    <string name="home_comprehensive">综合</string>
+    <string name="home_rankinglist">排行榜</string>
+
+
+    <!--        这部分熟dynamic界面所用文字        -->
+    <string name="dynamic_video">视频</string>
+    <string name="dynamic_comprehensive">综合</string>
+    <string name="dynamic_hot">热门</string>
+
+
+</resources>
