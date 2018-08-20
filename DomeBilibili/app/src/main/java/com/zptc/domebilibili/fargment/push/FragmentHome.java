@@ -1,7 +1,6 @@
 package com.zptc.domebilibili.fargment.push;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.zptc.domebilibili.activity.R;
+
 import com.zptc.domebilibili.fargment.tab.TableChaseAnime;
 import com.zptc.domebilibili.fargment.tab.TableLive;
 import com.zptc.domebilibili.fargment.tab.TableOther;
@@ -31,6 +30,8 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.badge.
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import com.zptc.domebilibili.activity.R;
 
 public class FragmentHome extends Fragment {
 

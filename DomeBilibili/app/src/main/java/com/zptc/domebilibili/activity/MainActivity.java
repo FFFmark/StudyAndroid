@@ -1,6 +1,8 @@
 package com.zptc.domebilibili.activity;
 
+import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +27,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
-    private LinearLayout layout_bottom,layout_home,layout_channel,layout_dynamic,layout_vipshop,layout_menu;
+    private LinearLayout layout_bottom,layout_home,layout_channel,layout_dynamic,layout_vipshop,layout_menu,dl_left_menu;
+    private DrawerLayout drawerLayout;
     private TextView tv_home,tv_channle,tv_dynamic,tv_vipshop;
     private ImageView img_home,img_channel,img_dynamic,img_vipshop;
     private MyViewPager vp_title,vp_push;
@@ -69,6 +72,9 @@ public class MainActivity extends AppCompatActivity{
         layout_channel = findViewById(R.id.main_layout_channel);
         layout_dynamic = findViewById(R.id.main_layout_dynamic);
         layout_vipshop = findViewById(R.id.main_layout_vipshop);
+        layout_menu = findViewById(R.id.main_layout_menu);
+        drawerLayout = findViewById(R.id.main_layout_drawermenu);
+        dl_left_menu = findViewById(R.id.main_left_menu);
 
         tv_home = findViewById(R.id.main_tv_home);
         tv_channle = findViewById(R.id.main_tv_channel);
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity{
         layout_channel.setOnClickListener(onClick);
         layout_dynamic.setOnClickListener(onClick);
         layout_vipshop.setOnClickListener(onClick);
+        layout_menu.setOnClickListener(onClick);
 
     }
 
@@ -126,21 +133,66 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.mian_layout_home:
                     vp_push.setCurrentItem(0,false);
                     vp_title.setCurrentItem(0,false);
+                    ChangeColor(0);
                     break;
                 case R.id.main_layout_channel:
                     vp_push.setCurrentItem(1,false);
                     vp_title.setCurrentItem(1,false);
+                    ChangeColor(1);
                     break;
                 case R.id.main_layout_dynamic:
                     vp_push.setCurrentItem(2,false);
                     vp_title.setCurrentItem(2,false);
+                    ChangeColor(2);
                     break;
                 case R.id.main_layout_vipshop:
                     vp_push.setCurrentItem(3,false);
                     vp_title.setCurrentItem(3,false);
+                    ChangeColor(3);
+                    break;
+                case R.id.main_layout_menu:
+                    if (!drawerLayout.isDrawerOpen(dl_left_menu)){
+                        drawerLayout.openDrawer(dl_left_menu);
+                    }
                     break;
             }
         }
+    }
+
+    private void ChangeColor (int i){
+
+        int colorture = getResources().getColor(R.color.colorAccent);
+        int colorfalse = getResources().getColor(R.color.colorTextGray);
+
+        tv_home.setTextColor(colorfalse);
+        tv_channle.setTextColor(colorfalse);
+        tv_dynamic.setTextColor(colorfalse);
+        tv_vipshop.setTextColor(colorfalse);
+
+        img_home.setColorFilter(colorfalse);
+        img_channel.setColorFilter(colorfalse);
+        img_dynamic.setColorFilter(colorfalse);
+        img_vipshop.setColorFilter(colorfalse);
+
+        switch (i){
+            case 0:
+                tv_home.setTextColor(colorture);
+                img_home.setColorFilter(colorture);
+                break;
+            case 1:
+                tv_channle.setTextColor(colorture);
+                img_channel.setColorFilter(colorture);
+                break;
+            case 2:
+                tv_dynamic.setTextColor(colorture);
+                img_dynamic.setColorFilter(colorture);
+                break;
+            case 3:
+                tv_vipshop.setTextColor(colorture);
+                img_vipshop.setColorFilter(colorture);
+                break;
+        }
+
     }
 
 }
