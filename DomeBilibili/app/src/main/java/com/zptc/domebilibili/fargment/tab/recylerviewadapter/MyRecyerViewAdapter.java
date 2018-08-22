@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.zptc.domebilibili.activity.R;
@@ -19,9 +20,9 @@ import java.util.Map;
 public class MyRecyerViewAdapter extends RecyclerView.Adapter<MyRecyerViewAdapter.GradViewAdapter>{
 
     private Context mContext;
-    private List<Map<String,String>> mlist;
+    private List<Map<String,Object>> mlist;
 
-    public MyRecyerViewAdapter(Context context , List<Map<String, String>> list) {
+    public MyRecyerViewAdapter(Context context , List<Map<String, Object>> list) {
         super();
         this.mContext = context;
         this.mlist = list;
@@ -39,16 +40,21 @@ public class MyRecyerViewAdapter extends RecyclerView.Adapter<MyRecyerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyRecyerViewAdapter.GradViewAdapter holder, int position) {
 
-        String imgURL = mlist.get(position).get("coverImg");
-        String titleText = mlist.get(position).get("movieName");
-        String Classify = mlist.get(position).get("summary");
+        String imgURL = (String) mlist.get(position).get("coverImg");
+        String titleText = (String) mlist.get(position).get("movieName");
+        String Classify = (String) mlist.get(position).get("summary");
 
-        Glide.with(mContext)
-                .load(imgURL)
-                .into(holder.rvImg);
-        holder.rvTitle.setText(titleText);
-        holder.rvClassify.setText(Classify);
+        if (mlist.size()==0){
 
+            Toast.makeText(mContext , "请求失败，请重试",Toast.LENGTH_LONG).show();
+
+        }else {
+            Glide.with(mContext)
+                    .load(imgURL)
+                    .into(holder.rvImg);
+            holder.rvTitle.setText(titleText);
+            holder.rvClassify.setText(Classify);
+        }
     }
 
     @Override
